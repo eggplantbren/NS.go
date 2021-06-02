@@ -1,4 +1,4 @@
-package nested_sampling
+package main
 
 import "math"
 

@@ -1,4 +1,4 @@
-package nested_sampling
+package main
 
 import (
     "math"
@@ -40,5 +40,5 @@ func log_likelihood(particle *Particle) float64 {
         f += c_u - 0.5*tau_u*math.Pow(particle.xs[i] - 0.5, 2);
         g += c_v - 0.5*tau_v*math.Pow(particle.xs[i] - 0.5 - shift, 2);
     }
-    return logsumexp([2]float64{f, log_hundred + g});
+    return logsumexp([]float64{f, log_hundred + g});
 }
