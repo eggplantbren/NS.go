@@ -8,5 +8,6 @@ import (
 
 func main() {
     rand.Seed(time.Now().UTC().UnixNano())
-    fmt.Println(Generate())
+    sampler := make_sampler()
+    fmt.Println(sampler)
 }
